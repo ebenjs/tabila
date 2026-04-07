@@ -10,15 +10,20 @@ Le projet contient:
 
 ## Sommaire
 
-- [Architecture](#architecture)
-- [Stack technique](#stack-technique)
-- [Prerequis](#prerequis)
-- [Demarrage rapide](#demarrage-rapide)
-- [Comptes seed (dev)](#comptes-seed-dev)
-- [Configuration backend](#configuration-backend)
-- [Scripts utiles](#scripts-utiles)
-- [Tests et build](#tests-et-build)
-- [API et endpoints](#api-et-endpoints)
+- [Tabila - QR Restaurant Ordering System](#tabila---qr-restaurant-ordering-system)
+  - [Sommaire](#sommaire)
+  - [Architecture](#architecture)
+  - [Stack technique](#stack-technique)
+  - [Prerequis](#prerequis)
+  - [Demarrage rapide](#demarrage-rapide)
+    - [Option A - demarrage complet via Makefile](#option-a---demarrage-complet-via-makefile)
+    - [Option B - commandes manuelles](#option-b---commandes-manuelles)
+    - [Postgres local (optionnel)](#postgres-local-optionnel)
+  - [Comptes seed (dev)](#comptes-seed-dev)
+  - [Configuration backend](#configuration-backend)
+  - [Scripts utiles](#scripts-utiles)
+  - [Tests et build](#tests-et-build)
+  - [API et endpoints](#api-et-endpoints)
 
 ## Architecture
 
@@ -207,7 +212,3 @@ Documentation OpenAPI (JSON):
 UI docs:
 
 - endpoint Scalar expose par le backend (voir `ScalarController`).
-
----
-
-Si tu veux, je peux aussi ajouter un schema d architecture (Mermaid) et une section "Troubleshooting" (CORS, ports deja utilises, reset base locale).
