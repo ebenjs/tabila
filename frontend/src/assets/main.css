@@ -1,0 +1,232 @@
+@import "./base.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap");
+
+:root {
+  --ink: #0f172a;
+  --muted: #475569;
+  --line: #cbd5e1;
+  --primary: #0f766e;
+  --primary-soft: #ccfbf1;
+  --danger: #be123c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(
+      circle at 8% 2%,
+      rgba(14, 116, 144, 0.28) 0,
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 92% 18%,
+      rgba(16, 185, 129, 0.22) 0,
+      transparent 30%
+    ),
+    linear-gradient(160deg, #f8fafc, #eef2ff 44%, #ecfeff);
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.menu-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 18px;
+  position: relative;
+}
+
+.halo {
+  position: fixed;
+  width: 240px;
+  height: 240px;
+  border-radius: 999px;
+  filter: blur(52px);
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.halo-top {
+  top: -90px;
+  left: -70px;
+  background: #0ea5e9;
+}
+
+.halo-bottom {
+  bottom: -110px;
+  right: -80px;
+  background: #34d399;
+}
+
+.hero {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.09);
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 6px 0 8px;
+  font-size: clamp(24px, 6vw, 36px);
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.welcome-banner {
+  border: 2px solid;
+  border-radius: 14px;
+  padding: 14px;
+  margin-top: 6px;
+}
+
+button {
+  font: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.state-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.84);
+  padding: 14px;
+}
+
+.state-card.error {
+  border-color: #fda4af;
+  background: #fff1f2;
+  color: var(--danger);
+}
+
+.quick-info {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  border-radius: 999px;
+  border: 1px solid #99f6e4;
+  background: var(--primary-soft);
+  color: #115e59;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.category-block {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 14px;
+}
+
+.category-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.category-head span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.menu-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.menu-item-main h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.menu-item-main p {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.menu-item-main strong {
+  font-size: 16px;
+}
+
+.menu-item-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (min-width: 640px) {
+  .menu-page {
+    padding: 24px;
+  }
+
+  .menu-item {
+    grid-template-columns: 1fr 150px;
+    align-items: center;
+  }
+
+  .menu-item-image {
+    height: 100px;
+  }
+}
